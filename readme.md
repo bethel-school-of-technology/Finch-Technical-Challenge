@@ -1,4 +1,6 @@
-## Ask - 
+#### A live version of the app has been deployed to Vercel - [https://finch-vercel.vercel.app/]
+
+## Ask 
 + Create a web application in your favorite language that calls Finch’s Sandbox API to get an access token.
 + Use the access token to get the employer’s full employee directory.
 + Your user interface should allow each individual employee to be selected and show the employee's personal and employment data.
