@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Finch Technical Challenge</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Exemplary Bank</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Employer Directory <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="employee">Employee Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="company">Company Data</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+       <div class ="m-4">     
+        <table class="table table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First Name </th> 
+                <th scope="col">Last Name</th>
+                <th scope="col">Current Employee </th> 
+            </tr>
+            </thead>
+            <tr class="parentRow">
+              <td><span class="expandChildTable">{{data.individuals[0]['id']}}</span></td>
+              <td>{{data.individuals[0]['first_name']}}</td>
+              <td>{{data.individuals[0]['last_name']}}</td>
+              <td>{{data.individuals[0]['is_active']}}</td>
+            </tr>
+            <tr class="childTableRow">
+                <td colspan="3">
+                    <h5>Employer details</h5>
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Department</th>
+                            <th scope="col">Manager ID</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{data.individuals[0]['department']['name']}}</td>
+                                <td>{{data.individuals[0].manager['id']}}</td>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[10]['id']}}</span></td>
+                <td>{{data.individuals[10]['first_name']}}</td>
+                <td>{{data.individuals[10]['last_name']}}</td>
+                <td>{{data.individuals[10]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[10]['department']['name']}}</td>
+                                  <td>{{data.individuals[10].manager['id']}}</td>
+        
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[9]['id']}}</span></td>
+                <td>{{data.individuals[9]['first_name']}}</td>
+                <td>{{data.individuals[9]['last_name']}}</td>
+                <td>{{data.individuals[9]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[9]['department']['name']}}</td>
+                                  <td>{{data.individuals[9].manager['id']}}</td>
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[8]['id']}}</span></td>
+                <td>{{data.individuals[8]['first_name']}}</td>
+                <td>{{data.individuals[8]['last_name']}}</td>
+                <td>{{data.individuals[8]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[8]['department']['name']}}</td>
+                                  <td>{{data.individuals[8].manager['id']}}</td>                          
+                              </tr>
+        
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[7]['id']}}</span></td>
+                <td>{{data.individuals[7]['first_name']}}</td>
+                <td>{{data.individuals[7]['last_name']}}</td>
+                <td>{{data.individuals[7]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[7]['department']['name']}}</td>
+                                  <td>{{data.individuals[7].manager['id']}}</td>
+                                  
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+
+
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[4]['id']}}</span></td>
+                <td>{{data.individuals[4]['first_name']}}</td>
+                <td>{{data.individuals[4]['last_name']}}</td>
+                <td>{{data.individuals[4]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[4]['department']['name']}}</td>
+                                  <td>{{data.individuals[4].manager['id']}}</td>                        
+                              </tr>
+    
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+
+
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[2]['id']}}</span></td>
+                <td>{{data.individuals[2]['first_name']}}</td>
+                <td>{{data.individuals[2]['last_name']}}</td>
+                <td>{{data.individuals[2]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[2]['department']['name']}}</td>
+                                  <td>{{data.individuals[2].manager['id']}}</td>
+                                  
+                              </tr>
+
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[15]['id']}}</span></td>
+                <td>{{data.individuals[15]['first_name']}}</td>
+                <td>{{data.individuals[15]['last_name']}}</td>
+                <td>{{data.individuals[15]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[15]['department']['name']}}</td>
+                                  <td>{{data.individuals[15].manager['id']}}</td>
+                                  
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+
+
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[22]['id']}}</span></td>
+                <td>{{data.individuals[22]['first_name']}}</td>
+                <td>{{data.individuals[22]['last_name']}}</td>
+                <td>{{data.individuals[22]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[22]['department']['name']}}</td>
+                                  <td>{{data.individuals[22].manager['id']}}</td>
+                                  
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+
+
+
+              <tr class ="parentRow">
+                <td><span class="expandChildTable">{{data.individuals[10]['id']}}</span></td>
+                <td>{{data.individuals[10]['first_name']}}</td>
+                <td>{{data.individuals[10]['last_name']}}</td>
+                <td>{{data.individuals[10]['is_active']}}</td>
+              </tr>
+              <tr class="childTableRow">
+                  <td colspan="3">
+                      <h5>Employer details</h5>
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th scope="col">Department</th>
+                              <th scope="col">Manager ID</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{data.individuals[10]['department']['name']}}</td>
+                                  <td>{{data.individuals[10].manager['id']}}</td>
+                                  
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+        </table>
+        
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p class="lead">Here we are calling the <a href ="https://developer.tryfinch.com/docs/reference/12419c085fc0e-directory">/directory</a> endopoint to get information about the company directory and organization. When clicked on the Individual id, one can view company information</p>
+            </div>
+          </div>
+       
+        <script src="//code.jquery.com/jquery.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script>
+        $(function() {
+            $('.childTableRow').hide();
+            $('.expandChildTable').on('click', function() {
+                $(this).toggleClass('selected').closest('tr').next().toggle();
+            })
+        });
+
+        </script>  
+        </div> 
+</body>
+
+</html>
