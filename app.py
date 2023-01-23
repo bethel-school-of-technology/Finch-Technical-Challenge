@@ -16,9 +16,8 @@ access_token = json.dumps(response_token_json["access_token"])
 #stripping access token and storing it the variable
 access_token = access_token.replace('"','') 
 
-#building the access token from subsequent calls
+#building the access token for subsequent calls
 auth_token_string='Bearer ' + access_token 
-print(auth_token_string)
 
 
 #defining different routs
